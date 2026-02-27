@@ -86,3 +86,26 @@ def test_get_nth_fibonacci_negative():
    # Act & Assert
    with pytest.raises(ValueError):
       get_nth_fibonacci(n)
+
+def test_get_nth_fibonacci_two():
+    """Test with n=2."""
+    # Arrange
+    n = 2
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 1
+
+
+def test_area_of_circle_large_radius():
+    """Test with a large positive radius."""
+    # Arrange
+    radius = 5
+
+    # Act
+    result = area_of_circle(radius)
+
+    # Assert
+    assert abs(result - 78.53981) < 1e-5
